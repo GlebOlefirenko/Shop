@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Підтвердження Email</h2>
+<p>Ми надіслали код підтвердження на вашу пошту. Введіть його нижче:</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Підтвердити</button>
+</form>
+{% endblock %}
